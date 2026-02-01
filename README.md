@@ -30,8 +30,6 @@ npm run preview
 - [Framer Motion](https://www.framer.com/motion/) — Animations
 
 ## Deployment
+For future deployments, just run:   
 
-For future deployments, just run:                                                                                                             ▂ 
-                                                                                                                                                █ 
-npm run build && npx gh-pages -d dist --dotfiles                                                                                          █ 
-                                                       
+npm run build && npx gh-pages -d dist --dotfiles  
