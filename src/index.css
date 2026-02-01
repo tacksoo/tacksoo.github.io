@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Academic color palette */
+    --background: 40 33% 97%; /* Warm cream #faf8f5 */
+    --foreground: 0 0% 20%; /* Charcoal #333333 */
+
+    --card: 40 33% 97%;
+    --card-foreground: 0 0% 20%;
+
+    --popover: 40 33% 97%;
+    --popover-foreground: 0 0% 20%;
+
+    --primary: 210 53% 24%; /* Deep navy #1e3a5f */
+    --primary-foreground: 40 33% 97%;
+
+    --secondary: 40 20% 92%;
+    --secondary-foreground: 210 53% 24%;
+
+    --muted: 40 15% 90%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 43 50% 59%; /* Warm gold #c9a961 */
+    --accent-foreground: 210 53% 24%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 40 33% 97%;
+
+    --border: 40 10% 85%;
+    --input: 40 10% 85%;
+    --ring: 43 50% 59%;
+
+    --radius: 0.25rem;
+
+    /* Custom tokens */
+    --nav-height: 70px;
+    --content-max-width: 900px;
+    --section-padding: 80px;
+    --divider: 40 5% 80%;
+
+    /* Font families */
+    --font-heading: 'Crimson Text', Georgia, serif;
+    --font-body: 'Source Sans 3', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .dark {
+    --background: 210 53% 12%;
+    --foreground: 40 33% 97%;
+    --card: 210 53% 15%;
+    --card-foreground: 40 33% 97%;
+    --popover: 210 53% 15%;
+    --popover-foreground: 40 33% 97%;
+    --primary: 40 33% 97%;
+    --primary-foreground: 210 53% 24%;
+    --secondary: 210 40% 20%;
+    --secondary-foreground: 40 33% 97%;
+    --muted: 210 30% 25%;
+    --muted-foreground: 40 20% 70%;
+    --accent: 43 50% 59%;
+    --accent-foreground: 210 53% 24%;
+    --border: 210 30% 25%;
+    --input: 210 30% 25%;
+    --divider: 210 20% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.7;
+    font-size: 17px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    color: hsl(var(--primary));
+    line-height: 1.3;
+  }
+
+  h1 {
+    font-size: 2.75rem;
+    letter-spacing: -0.01em;
+  }
+
+  h2 {
+    font-size: 1.875rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 1.25rem;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@layer components {
+  .section-divider {
+    @apply w-full h-px bg-border my-0;
+    background-color: hsl(var(--divider));
+  }
+
+  .content-container {
+    @apply w-full mx-auto px-6;
+    max-width: var(--content-max-width);
+  }
+
+  .section-padding {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+  }
+
+  .accent-link {
+    @apply inline-block transition-all duration-200;
+    color: hsl(var(--accent));
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+
+  .accent-link:hover {
+    border-bottom-color: hsl(var(--accent));
+  }
+
+  .body-link {
+    @apply inline-block transition-all duration-200;
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+  }
+
+  .body-link:hover {
+    color: hsl(var(--accent));
+    border-bottom-color: hsl(var(--accent));
+  }
+
+  .nav-link {
+    @apply text-sm tracking-wide transition-colors duration-200;
+    color: hsl(var(--muted-foreground));
+    font-weight: 500;
+  }
+
+  .nav-link:hover {
+    color: hsl(var(--primary));
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+}
