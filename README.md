@@ -1,6 +1,6 @@
-# Dr. Tacksoo Im — AI Advisor Website
+# Dr. Tacksoo Im — Advisor Website
 
-Personal website for Dr. Tacksoo Im, Professor of Information Technology and AI Advisor for Education & Business.
+Site for folks who would like to contact me  
 
 ## Development
 
@@ -31,4 +31,7 @@ npm run preview
 
 ## Deployment
 
-Build the project with `npm run build` and deploy the `dist` folder to any static hosting provider (Vercel, Netlify, GitHub Pages, etc.).
+For future deployments, just run:                                                                                                             ▂ 
+                                                                                                                                                █ 
+npm run build && npx gh-pages -d dist --dotfiles                                                                                          █ 
+                                                       
